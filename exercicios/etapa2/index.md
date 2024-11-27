@@ -28,6 +28,12 @@ Exercício | Explicação | Executar | Código
 049 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/049) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/049)
 050 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/050) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/050)
 051 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/051) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/051)
+prova1 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/prova01/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/prova01/)
+prova2 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/prova02/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/prova02/)
+prova3 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/prova03/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/prova03/)
+prova4 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/prova04/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/prova04/)
+prova5 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/prova05/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/prova05/)
+recuperação | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/recup01/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/recup01/)
 
 
 ⬅️ [ Voltar ](https://eteot.github.io/exercicios-javascript-2024/exercicios/)
