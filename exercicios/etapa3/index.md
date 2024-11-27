@@ -1,4 +1,4 @@
-# Exercícios da 3<sup>a</sup> etapa
+# Exercícios da 3<sup>a</sup> etapa 333
 
 Exercício | Explicação | Executar | Código
 :---------: | :------ | :-------: | :-------:
