@@ -33,7 +33,11 @@ prova2 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-202
 prova3 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/prova03/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/prova03/)
 prova4 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/prova04/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/prova04/)
 prova5 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/prova05/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/prova05/)
-recuperação | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/recup01/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/recup01/)
+prova6 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/prova65/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/prova06/)
+recuperação1 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/recup01/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/recup01/)
+recuperação2 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/recup02/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/recup02/)
+recuperação3 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/recup03/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/recup03/)
+recuperação4 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa2/provas-etapa2/recup04/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa2/provas-etapa2/recup04/)
 
 
 ⬅️ [ Voltar ](https://eteot.github.io/exercicios-javascript-2024/exercicios/)
