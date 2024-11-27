@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Avaliação 3<sup>o</sup> Trimestre</h1>
+
+            <details>
+                <summary>Enunciado</summary>
+                <p>A seguir, informe um valor numérico inteiro e escolha qual das opções será realizada com ele.</p>
+
+                <ul>
+                    <li>Mostrar quanto é 10% do número [1,0 ponto]</li>
+                    <li>Saber se o número é múltiplo de 5 [1,0 ponto]</li>
+                    <li>Calcular o fatorial do número [2,0 pontos]</li>
+                </ul>
+            </details>
+
+            <div>
+                <label for="num">Número</label>
+                <input type="number" name="num" id="num">
+            </div>
+
+            <div class="botoes">
+                <button onclick="porcento(num.value, 10)">10%</button>
+                <button onclick="multiplo(num.value, 5)">Múltiplo de 5?</button>
+                <button onclick="fatorial(num.value)">Fatorial</button>
+            </div>
+        </section>
+
+        <section id="resultado">
+            <h2>Resultado</h2>
+            <p id="mensagem"></p>
+            <button onclick="voltar()">Voltar</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de JavaScript</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: royalblue;
+        }
+
+        main, section {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.491);
+        }
+
+        h1, h2 {
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Contagem Personalizada</h1>
+        <p>Será exibida uma contagem regressiva a partir do valor informado pelo usuário até chegar a 0. O campo será obrigatório e só aceitará valores positivos, a partir de 1. O decremento sempre será de 1 unidade. </p>
+        <form action="#" method="get" onsubmit="event.preventDefault();contador()">
+            <label for="num">Iniciar em</label>
+            <input type="number" name="num" id="num" min="1" required>
+            <input type="submit" value="Contar">
+        </form>
+    </main>
+    <section id="saida">
+        <h2>Resultado</h2>
+        <p id="result"></p>
+    </section>
+    <script>
+        saida.style.visibility = 'hidden';
+        function contador() {
+            let i = Number(num.value)
+            result.innerHTML = ''
+            console.clear()
+            for (let c = i; c >= 0; c -= 1) {
+                result.innerHTML += `${c} &#x27A1; `
+                console.log(c)
+            }
+            result.innerHTML += '&#x1F3C1;'
+            saida.style.visibility = 'visible';
+        }
+    </script>
+</body>
+</html>

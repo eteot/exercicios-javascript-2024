@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de JavaScript</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: darkorange;
+        }
+
+        main, section {
+            background-color: white;
+            max-width: 500px;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.467);
+        }
+
+        input[type=submit] {
+            color: white;
+            font-size: 1.2em;
+            background-color: darkorange;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        input[type=number] {
+            font-size: 1.2em;
+        }
+
+        strong {
+            color: darkorange;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Calculando Desconto</h1>
+        <p>Clientes que comprarem conosco sempre ganham desconto, mas existem algumas regras:</p>
+
+        <ul>
+            <li>Quem comprar <strong>até 10 produtos</strong>, ganha <strong>5%</strong> de desconto.</li>
+            <li>Quem comprar <strong>entre 11 e 50 produtos</strong>, ganha <strong>15%</strong> de desconto.</li>
+            <li>Quem comprar <strong>mais de 50 produtos</strong>, ganha <strong>20%</strong> de desconto.</li>
+        </ul>
+
+        <form action="#" method="get" onsubmit="event.preventDefault();analisar()">
+            <div>
+                <label for="fqtd">Quantidade: </label>
+                <input type="number" name="fqtd" id="fqtd" min="1" required>
+            </div>
+            <div>
+                <label for="ftot">Total da compra: R$</label>
+                <input type="number" name="ftot" id="ftot" min="1" step="0.01" required>
+            </div>
+            <div>
+                <input type="submit" value="Calcular">
+            </div>
+        </form>
+    </main>
+
+    <section id="resultado">
+        <h2>Resultado da Compra</h2>
+        <p id="frase"></p>
+    </section>
+
+    <script>
+        resultado.style.visibility = "hidden"
+        function analisar() {
+            let qtd = Number(fqtd.value)
+            let total = Number(ftot.value)
+
+            let desc = 0
+            if (qtd < 10) {
+                desc = 5
+            } else if (qtd < 50) {
+                desc = 15
+            } else {
+                desc = 20
+            }
+
+            let novo = total - (total * desc / 100)
+
+            frase.innerHTML = `O cliente comprou <strong>${qtd} produtos</strong>, e por isso ganhou <strong>${desc}% de desconto</strong>. Era pra pagar R$${total.toFixed(2)} e vai pagar <strong>R$${novo.toFixed(2)}</strong>`
+
+            resultado.style.visibility = "visible"
+        }
+    </script>
+</body>
+</html>

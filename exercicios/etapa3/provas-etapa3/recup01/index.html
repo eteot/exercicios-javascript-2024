@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flamengo vs Fluminense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="imagens/fla-flu.png" alt="Fla Flu">
+    </header>
+    <main>
+        <section>
+            <h1>Cadastre o placar</h1>
+            <form action="#" method="get" onsubmit="event.preventDefault();cadastrar(vano.value, vfla.value, vflu.value)">
+                <div>
+                    <label for="vano">Ano</label>
+                    <input type="number" name="vano" id="vano" min="2000" max="2024" required>
+                </div>
+                <div>
+                    <label for="vfla">Fla</label>
+                    <input type="number" name="vfla" id="vfla" min="0" max="10" value="0" required>
+                    x
+                    <input type="number" name="vflu" id="vflu" min="0" max="10" value="0" required>
+                    <label for="vflu">Flu</label>
+                </div>
+                <div>
+                    <input type="submit" value="Cadastrar">
+                </div>
+            </form>
+        </section>
+        <section>
+            <h2>Flamengo</h2>
+            <ul id="resfla"></ul>
+        </section>
+        <section>
+            <h2>Fluminense</h2>
+            <ul id="resflu"></ul>
+        </section>
+        <section>
+            <h2>Empates</h2>
+            <ul id="resempate"></ul>
+        </section>
+        <button onclick="analisar()">Analisar</button>
+    </main>
+    <article id="resultado">
+        <h2>Análise de Resultados</h2>
+        <ul id="analise">
+
+        </ul>
+    </article>
+    <script src="script.js"></script>
+</body>
+</html>

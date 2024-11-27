@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão JS 03</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Lendo Idades</h1>
+        <button onclick="idades()">Começar</button>
+    </main>
+
+    <section id="resultado">
+        <h2 id="tipo">Resultado</h2>
+        <ul id="lista">O resultado vem aqui</ul>
+    </section>
+    
+
+    <script>
+        resultado.style.visibility = 'hidden'
+        function idades() {
+            // Iniciando as variáveis de trabalho
+            let c = 0, menor = 0, maior = 0
+            let jovem = '', velho = '', soma = 0
+            let maioridade = 0
+            lista.innerHTML = ''
+            // Variável de controle que vai identificar se o usuário quer ou não continuar com a entrada de dados
+            let continuar = true
+            while (continuar) {
+                c++
+                // Entrada de dados: lendo nome e idade de cada pessoa
+                let nome = prompt(`Como se chama a ${c}ª pessoa?`)
+                let idade = Number(prompt(`Quantos anos ${nome} tem?`))
+                console.log(`Pessoa ${c}: ${nome} tem ${idade} ano(s)`)
+
+                // Somando todas as idades
+                soma += idade
+
+                // Maior, menor idade e com nomes do mais jovem e do mais velho
+                if (c == 1) {
+                    menor = idade
+                    jovem = nome
+                    maior = idade
+                    velho = nome
+                } else {
+                    if (idade < menor) {
+                        menor = idade
+                        jovem = nome
+                    }
+                    if (idade > maior) {
+                        maior = idade
+                        velho = nome
+                    }
+                }
+                // Identifica quantas pessoas tem 18 anos ou mais
+                if (idade >= 18) {
+                    maioridade++
+                }
+                // Pergunta ao usuário se ele quer continuar
+                continuar = confirm('Quer continuar?')
+            }
+
+            // Calcula a média
+            let media = soma / c
+
+            // Mostra os resultados na lista
+            tipo.innerHTML = `Resultado da análise de ${c} pessoas`
+            lista.innerHTML += `<li>Ao todo, temos ${maioridade} pessoa(s) acima de 18 anos de idade.</li>`
+            lista.innerHTML += `<li>A pessoa mais jovem é ${jovem}, com ${menor} anos.</li>`
+            lista.innerHTML += `<li>A pessoa mais velha é ${velho}, com ${maior} anos.</li>`
+            lista.innerHTML += `<li>A média de idade é de ${media.toFixed(2)} ano(s).</li>`
+
+            resultado.style.visibility = 'visible'
+
+        }
+    </script>
+</body>
+</html>

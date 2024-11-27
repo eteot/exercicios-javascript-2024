@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Situação de Alunos FAETEC</h1>
+
+        <details>
+            <summary>Veja aqui as regras para analisar a situação de um aluno</summary>
+    
+            <ul type="disc">
+                <li>O aluno que tirar 6.0 ou mais na prova, não precisará fazer recuperação.</li>
+                <li>Aquele que tirar menos de 6.0, ficará abaixo da média e precisará fazer recuperação. Aí uma segunda análise deverá ser feita:</li>
+                
+                <ul type="square">
+                    <li>Sendo a nota da recuperação menor que a nota da prova inicial, o aluno não conseguiu realizar nenhum tipo de melhoria.</li>
+                    <li>Sendo a nota de recuperação maior que a nota tirada anteriormente, temos duas situações:</li>
+                    
+                    <ul type="circle">
+                        <li>A nota ficou melhor do que antes, mas ainda não atingiu a média 6.0</li>
+                        <li>A nota foi mais alta que 6.0 e a recuperação foi um sucesso.</li>
+                    </ul>
+                </ul>
+            </ul>
+        </details>
+
+        <button onclick="prova()">Analisar</button>
+    </main>
+    <section id="resp">
+        <h2 id="titulo">O título vai aparecer aqui</h2>
+        <p id="frase">Os resultados da análise vão aparecer aqui</p>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

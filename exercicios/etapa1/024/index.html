@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JS</title>
+</head>
+<body>
+    <main>
+        <h1>Exercício de Idade</h1>
+        <form action="#" method="get" onsubmit="event.preventDefault();analise()">
+            <div>
+                <label for="fnome">Nome </label>
+                <input type="text" name="fnome" id="fnome" minlength="5" required>
+            </div>
+            <div>
+                <label for="fano">Ano de Nascimento </label>
+                <input type="number" name="fano" id="fano" min="1900" max="2024" required>
+            </div>
+            <div>
+                <input type="submit" value="Ok">
+            </div>
+        </form>
+    </main>
+    <section id="saida">
+        <h2>Resultado</h2>
+        <p id="res">O resultado vai aparecer aqui</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

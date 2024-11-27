@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Avaliação 3<sup>o</sup> Trimestre</h1>
+
+            <details>
+                <summary>Enunciado</summary>
+                <p>A seguir, temos um exemplo de atividade para manipulação de elementos de um vetor. Crie as rotinas para:</p>
+
+                <ul>
+                    <li>Mostrar o vetor na tela. Considere a possibilidade dele estar vazio. [2,0 pontos] </li>
+                    <li>Remover um elemento existente no vetor. Não é possíver remover elementos que não existem. [3,0 pontos]</li>
+                    <li>Procurar um elemento e dizer em que posição do vetor ele está. [1,0 ponto]</li>
+                </ul>
+            </details>
+
+            <div>
+                <label for="num">Número</label>
+                <input type="number" name="num" id="num">
+            </div>
+
+            <div class="botoes">
+                <button onclick="remover(num.value)">Remover</button>
+                <button onclick="procurar(num.value)">Procurar</button>
+            </div>
+        </section>
+
+        <section>
+            <table>
+                <tr id="vetor"></tr>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

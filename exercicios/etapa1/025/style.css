@@ -1,0 +1,42 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: green;
+}
+
+main, section {
+    max-width: 400px;
+    background-color: white;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: green;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+form > div {
+    margin-bottom: 10px;
+}
+
+input[type=submit] {
+    background-color: green;
+    color: white;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 5px;
+}
+
+strong {
+    font-weight: bolder;
+    color: green;
+}

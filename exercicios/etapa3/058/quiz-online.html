@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div id="pag">
+        <form name="quiz" onsubmit="return valida()">
+            <div>
+                <label for="nome"> Nome Completo </label>
+                <input type="text" name="nome" size="60">
+            </div>
+
+            <hr>
+
+            <div> 1- Qual a cor do Cavalo Branco de Napoleão ?</div>
+            <div>
+                <p> <input type="radio" name="q1" value="Preto"> Preto </p>
+                <p> <input type="radio" name="q1" value="Branco"> Branco </p>
+                <p> <input type="radio" name="q1" value="Sem Cor"> Sem Cor </p>
+            </div>
+            <div class="right" onclick="exibir('r1')"> Ver Resposta </div>
+            <p class="resp" id="r1">
+                Resposta: Branco.
+            </p>
+
+            <hr>
+
+            <div> 2- Pergunta nº 2? </div>
+            <div>
+                <p><input type="radio" name="q2" value="0"> Opção A </p>
+                <p><input type="radio" name="q2" value="1"> Opção B </p>
+                <p><input type="radio" name="q2" value="2"> Opção C </p>
+            </div>
+            <div class="right" onclick="exibir('r2')"> Ver Resposta </div>
+            <p class="resp" id="r2">
+                Resposta: Opção A.
+            </p>
+
+            <hr>
+
+            <div> 3- Pergunta nº 3? </div>
+            <div>
+                <p><input type="radio" name="q3" value="0"> Opção A </p>
+                <p><input type="radio" name="q3" value="1"> Opção B </p>
+                <p><input type="radio" name="q3" value="2"> Opção C </p>
+            </div>
+            <div class="right" onclick="exibir('r3')"> Ver Resposta </div>
+            <p class="resp" id="r3">
+                Resposta: Opção B.
+            </p>
+            <hr>
+
+            <div class="center">
+                <input type="submit" value="Finalizar">
+            </div>
+        </form>
+   </div> 
+   <script src="js/script.js"></script>
+</body>
+</html>

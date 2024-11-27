@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: green;
+    background-image: url('imagens/gramado.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+header {
+    max-width: 500px;
+    margin: auto;
+}
+
+header > img {
+    width: 100%;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+main, article#resultado {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.565);
+}
+
+section {
+    border: 2px solid green;
+    background-color: rgba(0, 128, 0, 0.105);
+    margin: 0 0 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+ul {
+    margin-left: 15px;
+    line-height: 1.5em;
+}
+
+input[type="number"] {
+    padding: 3px 5px;
+    margin: 2px;
+    text-align: right;
+    font-size: 1.2em;
+    color: green;
+    font-weight: bold;
+}
+
+input[type="submit"], button {
+    padding: 5px 15px;
+    margin: 5px;
+    font-size: 1.2em;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button {
+    padding: 5px 40px;
+    display: block;
+    margin: auto;
+}

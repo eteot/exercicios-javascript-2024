@@ -1,0 +1,15 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: cadetblue;
+}
+
+main, section {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}

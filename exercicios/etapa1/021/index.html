@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio JavaScript</title>
+
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: blueviolet;
+        }
+
+        main, section {
+            max-width: 500px;
+            background-color: white;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.608);
+        }
+
+        input[type=submit] {
+            background-color: blueviolet;
+            padding: 10px 30px;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        strong, h1, h2 {
+            color: blueviolet;
+        }
+
+        form > div {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Desafio dos Valores</h1>
+
+        <form action="#" method="get" onsubmit="event.preventDefault();valores()">
+            <div>
+                <label for="v1">Valor 1</label>
+                <input type="number" name="v1" id="v1" required>
+            </div>
+            <div>
+                <label for="v2">Valor 2</label>
+                <input type="number" name="v2" id="v2" required>
+            </div>
+            <div>
+                <input type="submit" value="Ok">
+            </div>
+        </form>
+    </main>
+
+    <section id="resultado">
+        <h2>Resultado</h2>
+        <p id="saida">As respostas vão aparecer aqui</p>
+    </section>
+
+    <script>
+        let res = document.getElementById("resultado")
+        let saida = document.getElementById("saida")
+        let v1 = document.getElementById("v1")
+        let v2 = document.getElementById("v2")
+        
+        res.style.visibility = "hidden"
+        function valores() {
+            // Entrada de dados
+            let n1 = Number(v1.value)
+            let n2 = Number(v2.value)
+
+            let dob = n1 * 2
+            let met = n2 / 2
+
+            let mai = n1
+            if (n2 > mai) {
+                mai = n2
+            }
+
+            saida.innerHTML = `Os valores analisados são <strong>${n1} e ${n2}</strong><br>`
+            saida.innerHTML += `O <strong>dobro do primeiro</strong> valor é <strong>${dob}</strong><br>`
+            saida.innerHTML += `A <strong>metade do segundo</strong> valor é <strong>${met}</strong><br>`
+            saida.innerHTML += `O <strong>maior</strong> valor digitado foi <strong>${mai}</strong><br>`
+            res.style.visibility = "visible"
+        }
+    </script>
+</body>
+</html>

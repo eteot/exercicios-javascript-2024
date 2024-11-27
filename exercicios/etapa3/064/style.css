@@ -1,0 +1,111 @@
+* {
+    /* Reset CSS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: lightblue;
+    height: 100vh;
+    padding-top: 30px;
+
+    /* Faz a urna ficar sempre acima do resultado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+main#urna {
+    /* O teclado da urna vai ficar na direita se tiver espaço. Senão, vai pra baixo (wrap) */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.372);
+}
+
+section#visor {
+    /* Caixa de número, foto e nome do candidato vão ficar empilhados */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: lightgray;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+
+section#visor input {
+    background-color: lightgray;
+    border: none;
+    font-size: 2em;
+    text-align: center;
+}
+
+img#foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+section#teclado {
+    /* Teclado da urna em grid de 3 colunas */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+button {
+    /* Configuração padrão para todos os botões da urna */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+button.btnnum {
+    /* Configuração para os números */
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+}
+
+button.btnconf {
+    background-color: green;
+}
+
+button.btncorr {
+    background-color: red;
+}
+
+section#resultado {
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.372);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 20px;
+}
+
+td:nth-child(1), td:nth-child(3) {
+    /* Colunas de número e votos vão estar centralizadas */
+    text-align: center;
+}

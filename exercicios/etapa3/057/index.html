@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Equação do 2<sup>o</sup> grau</h1>
+        <form action="#" method="get" onsubmit="event.preventDefault();equacao(va.value, vb.value, vc.value)">
+            <p><label for="va">a</label>
+            <input type="number" name="va" id="va"></p>
+            <p><label for="vb">b</label>
+            <input type="number" name="vb" id="vb"></p>
+            <p><label for="vc">c</label>
+            <input type="number" name="vc" id="vc"></p>
+            <input type="submit" value="Calcular">
+        </form>
+    </main>
+    <section>
+        <h2>Resultado</h2>
+        <ul id="result"></ul>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

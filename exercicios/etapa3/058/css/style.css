@@ -1,0 +1,46 @@
+body{
+    background-color: bisque;
+    color: rgb(15, 4, 90);
+}
+
+#pag{
+    width: 80%;
+    margin: auto;
+    background-color:burlywood;
+    padding: 2em;
+    border: 0.2em solid #f8f8f8;
+    border-radius: 1em;
+    box-shadow: 0.1em 0.1em 1em black;
+}
+
+hr{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+label{
+    color: brown;
+}
+
+.resp{
+    color: firebrick;
+    display: none;
+}
+
+.right{
+    text-align: right;
+    cursor: pointer;
+    color: brown;
+}
+
+.center{
+    text-align: center;
+}
+
+input[type=submit]{
+    padding: 1em;
+    background-color: brown;
+    color: white;
+    border-radius: 1em;
+    width: 12em;
+}

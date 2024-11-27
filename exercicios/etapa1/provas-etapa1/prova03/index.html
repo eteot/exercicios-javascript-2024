@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de JavaScript</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: blueviolet;
+        }
+
+        main, section {
+            background-color: white;
+            max-width: 500px;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.467);
+        }
+
+        input[type=submit] {
+            color: white;
+            font-size: 1.2em;
+            background-color: blueviolet;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        input[type=number] {
+            font-size: 1.2em;
+        }
+
+        input[type=text] {
+            font-size: 1.2em;
+        }
+
+        strong {
+            color: blueviolet;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Analisando Pesos</h1>
+        <p>Vamos cadastrar duas pessoas, pedindo <strong>nome</strong> e <strong>peso</strong> de cada uma. No final, vamos ver <strong>quem é mais pesado</strong>. Não se esqueça de verificar se os dois têm o <strong>mesmo peso</strong>.</p>
+
+        <form action="#" method="get" onsubmit="event.preventDefault();analisar()">
+            <h3>Pessoa 1</h3>
+            <label for="fnome1">Nome: </label>
+            <input type="text" name="fnome1" id="fnome1" required>
+            <br>
+            <label for="fpeso1">Peso: </label>
+            <input type="number" name="fpeso1" id="fpeso1" required step="0.01"> Kg
+            <h3>Pessoa 2</h3>
+            <label for="fnome2">Nome: </label>
+            <input type="text" name="fnome2" id="fnome2" required>
+            <br>
+            <label for="fpeso2">Peso: </label>
+            <input type="number" name="fpeso2" id="fpeso2" required step="0.01"> Kg
+            <br>
+            <input type="submit" value="Comparar">
+        </form>
+    </main>
+
+    <section id="resultado">
+        <h2>Resultado da Análise</h2>
+        <p id="frase"></p>
+    </section>
+
+    <script>
+        resultado.style.visibility = "hidden"
+        function analisar() {
+            let nome1 = fnome1.value
+            let peso1 = Number(fpeso1.value)
+            let nome2 = fnome2.value
+            let peso2 = Number(fpeso2.value)
+
+            if (peso1 > peso2) {
+                frase.innerHTML = `${nome1}, com ${peso1}kg, pesa mais que ${nome2}, com ${peso2}kg.`
+            } else if (peso2 > peso1) {
+                frase.innerHTML = `${nome2}, com ${peso2}kg, pesa mais que  ${nome1}, com ${peso1}kg.`
+            } else {
+                frase.innerHTML = `${nome1} e ${nome2} pesam ${peso1}kg, logo, têm o mesmo peso.`
+            }
+
+            resultado.style.visibility = "visible"
+        }
+    </script>
+</body>
+</html>

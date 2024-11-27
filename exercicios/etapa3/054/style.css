@@ -1,0 +1,47 @@
+body {
+    background-color: cadetblue;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+input#display {
+    width: 100%;
+    font-size: 3em;
+    text-align: right;
+    background-color: lightgray;
+    border: none;
+    margin-bottom: 10px;
+}
+
+div#botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.3em;
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.col4 {
+    grid-column: span 4;
+}
+
+.col2 {
+    grid-column: span 2;
+}

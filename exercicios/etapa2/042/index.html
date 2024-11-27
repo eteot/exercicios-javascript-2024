@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão JS 01</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Contador Especial</h1>
+        <form action="#" method="get" onsubmit="event.preventDefault();contador()" onreset="limpar()">
+            <div>
+                <label for="inicio">Início:</label>
+                <input type="number" name="inicio" id="inicio" required>
+            </div>
+            <div>
+                <label for="fim">Fim:</label>
+                <input type="number" name="fim" id="fim" required>
+            </div>
+            <div>
+                <label for="passo">Passo:</label>
+                <input type="number" name="passo" id="passo" required min="1">
+            </div>
+            <input type="submit" value="Contar">
+            <input type="reset" value="Recomeçar">
+        </form>
+    </main>
+
+    <section id="resultado">
+        <h2 id="tipo">Resultado da Contagem</h2>
+        <p id="contagem">A contagem vem aqui</p>
+    </section>
+    
+
+    <script>
+        resultado.style.visibility = 'hidden'
+        function contador() {
+            // Obtendo dados do formulário
+            let i = Number(inicio.value)
+            let f = Number(fim.value)
+            let p = Number(passo.value)
+
+            contagem.innerHTML = ''
+        
+            // Para decidir se a contagem é crescente ou regressiva, vamos comparar o início e o fim
+            if (i < f) {
+                // Contagem crescente
+                tipo.innerHTML = `Contagem crescente de ${i} até ${f} (avançando ${p})`
+                for (let c = i; c <= f; c += p) {
+                    contagem.innerHTML += `${c} \u{0027A1} `
+                }
+            } else {
+                // Contagem regressiva
+                tipo.innerHTML = `Contagem regressiva de ${i} até ${f} (recuando ${p})`
+                for (let c = i; c >= f; c -= p) {
+                    contagem.innerHTML += `${c} \u{0027A1} `
+                }
+            }
+            // Encerrando a contagem
+            contagem.innerHTML += ` \u{1F3C1} `
+            resultado.style.visibility = 'visible'
+        }
+        function limpar() {
+            // Quando o usuário clica no botão 'Recomeçar' do formulário
+            resultado.style.visibility = 'hidden'
+            inicio.focus()
+        }
+    </script>
+</body>
+</html>

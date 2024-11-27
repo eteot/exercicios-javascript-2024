@@ -1,0 +1,26 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: blueviolet;
+}
+
+main, section {
+    max-width: 600px;
+    background-color: white;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+button {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bolder;
+    padding: 10px 40px;
+    border: 0px solid blueviolet;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(154, 84, 219);
+    cursor: pointer;
+}

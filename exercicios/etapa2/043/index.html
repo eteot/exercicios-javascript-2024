@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão JS 02</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Analisando Números</h1>
+        <form action="#" method="get" onsubmit="event.preventDefault();entrada()" onreset="limpar()">
+            <div>
+                <label for="quant">Ler um total de </label>
+                <input type="number" name="quant" id="quant" required min="2"> valores
+            </div>
+            <input type="submit" value="Começar">
+            <input type="reset" value="Recomeçar">
+        </form>
+    </main>
+
+    <section id="resultado">
+        <h2 id="tipo">Resultado</h2>
+        <ul id="lista">O resultado vem aqui</ul>
+    </section>
+    
+
+    <script>
+        resultado.style.visibility = 'hidden'
+        function entrada() {
+            // Obtem os dados do formulário
+            let qtd = Number(quant.value)
+
+            lista.innerHTML = ''
+            // Iniciando as variáveis de trabalho
+            let c = 1, soma = 0, par = 0, impar = 0, somapar = 0, maior = 0, menor = 0
+            while (c <= qtd) {
+                // Lendo os números via prompt
+                let valor = Number(prompt(`Digite o ${c}º valor:`))
+                console.log(`${c}º valor: ${valor}`)
+                // Somando
+                soma += valor
+                // Pares e ímpares
+                if (valor % 2 == 0) {
+                    par++
+                    somapar += valor
+                } else {
+                    impar++
+                }
+                // Maior e menor
+                if (c == 1) {
+                    maior = valor
+                    menor = valor
+                } else {
+                    if (valor > maior) {
+                        maior = valor
+                    }
+                    if (valor < menor) {
+                        menor = valor
+                    }
+                }
+                c++
+            }
+            // Calculando a média
+            let media = soma / qtd
+            // Mostrando os resultados na lista
+            tipo.innerHTML = `Após ler ${qtd} valores, temos:`
+            lista.innerHTML += `<li>A soma total dos valores é ${soma}</li>`
+            lista.innerHTML += `<li>A média dos valores é ${media.toFixed(2)}</li>`
+            lista.innerHTML += `<li>Ao todo foram ${par} número(s) par(es) e ${impar} número(s) ímpar(es)</li>`
+            lista.innerHTML += `<li>A soma dos números pares é ${somapar}</li>`
+            lista.innerHTML += `<li>O menor valor lido foi ${menor} e o maior  foi ${maior}</li>`
+            resultado.style.visibility = 'visible'
+        }
+        function limpar() {
+            // Quando o usuário clica no botão 'Recomeçar' do formulário
+            resultado.style.visibility = 'hidden'
+            quant.focus()
+        }
+    </script>
+</body>
+</html>

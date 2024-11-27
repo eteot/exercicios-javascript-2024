@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação JavaScript</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(179, 38, 38);
+        }
+        
+        main, section {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+            line-height: 1.5em;
+        }
+
+        ul {
+            margin-left: 20px;
+            line-height: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0f9400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0c6f00;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        seta direita: código U+27A1 
+        bandeira: código U+1F3C1
+        seta cima: código U+2B06
+     -->
+    <main>
+        <h1>Analisando Pessoas</h1>
+        <p>Crie um script que, quando o usuário clicar no botão abaixo, leia nome e idade de várias pessoas (o usuário vai decidir se quer ou não continuar). Ao final, mostre:</p>
+
+        <ul>
+            <li>Quantas pessoas foram cadastradas;</li>
+            <li>Quantas pessoas tem 18 anos ou mais;</li>
+            <li>Quem é a pessoa mais jovem;</li>
+            <li>A média de idade do grupo.</li>
+        </ul>
+        <button onclick="analisar()">Cadastrar Pessoas</button>
+    </main>
+    <section id="resultado">
+        <h2>Resultado da Análise</h2>
+        <ul id="resposta"></ul>
+        <button onclick="limpar()">&#x2B06; Recomeçar</button>
+    </section>
+    <script>
+        resultado.style.visibility = 'hidden';  
+        function analisar() {
+            console.clear()
+            const numero = Intl.NumberFormat('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 2 });
+            let continuar = true
+            let tot = 0
+            let mais18 = 0
+            let menor
+            let jovem
+            let soma = 0
+            while (continuar) {
+                tot++
+                let nome = prompt(`Nome da ${tot}ª pessoa: `)
+                let idade = Number(prompt(`Idade de ${nome}: `))
+                console.log(`Pessoa ${tot}: ${nome} tem ${idade} anos.`)
+                soma += idade
+                if (idade >= 18) {
+                    mais18++
+                }
+                if (tot == 1) {
+                    menor = idade
+                    jovem = nome
+                } else {
+                    if (idade < menor) {
+                        menor = idade
+                        jovem = nome
+                    }
+                }
+                continuar = confirm('Quer cadastrar mais uma pessoa?')
+            }
+            let media = soma / tot
+            resposta.innerHTML = `<li>Ao todo temos ${tot} pessoa(s) cadastrada(s).</li>`
+            resposta.innerHTML += `<li>${mais18} pessoa(s) tem 18 anos ou mais.</li>`
+            resposta.innerHTML += `<li>A pessoa mais jovem é ${jovem}, com ${menor} anos de idade.</li>`
+            resposta.innerHTML += `<li>A média de idade do grupo é de ${numero.format(media)} anos.</li>`
+            resultado.style.visibility = 'visible';
+        }
+
+        function limpar() {
+            console.clear()
+            resultado.style.visibility = 'hidden';
+        }
+    </script>
+</body>
+</html>

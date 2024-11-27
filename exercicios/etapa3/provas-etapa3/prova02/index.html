@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Avaliação 3<sup>o</sup> Trimestre</h1>
+
+            <details>
+                <summary>Enunciado</summary>
+                <p>A seguir, informe um valor numérico inteiro e escolha qual das opções será realizada com ele.</p>
+
+                <ul>
+                    <li>Calcular o triplo do número [1,0 ponto]</li>
+                    <li>Saber se o número é par ou ímpar [1,0 ponto]</li>
+                    <li>Mostrar a tabuada do número na tela [2,0 pontos]</li>
+                </ul>
+            </details>
+
+            <div>
+                <label for="valor">Valor</label>
+                <input type="number" name="valor" id="valor">
+            </div>
+
+            <div class="botoes">
+                <button onclick="triplo(valor.value)">Triplo</button>
+                <button onclick="parouimpar(valor.value)">Par ou Ímpar</button>
+                <button onclick="tabuada(valor.value)">Tabuada</button>
+            </div>
+        </section>
+
+        <section id="resultado">
+            <h2>Resultado</h2>
+            <p id="mensagem"></p>
+            <button onclick="voltar()">Voltar</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão JS 05</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Sequência de Fibonacci</h1>
+        <form action="#" method="get" onsubmit="event.preventDefault();fibonacci()" onreset="limpar()">
+            <div>
+                <label for="qtd">Mostrar os primeiros </label>
+                <input type="number" name="qtd" id="qtd" required min="2"> termos da sequência de Fibonacci
+            </div>
+            <input type="submit" value="Ok">
+            <input type="reset" value="Recomeçar">
+        </form>
+    </main>
+
+    <section id="resultado">
+        <h2 id="tipo">Resultado</h2>
+        <p id="res">O resultado vem aqui</p>
+    </section>
+    
+
+    <script>
+        resultado.style.visibility = 'hidden'
+        function fibonacci() {
+            // Cria um formatador de números para valores no formato Brasileiro
+            const formatador = Intl.NumberFormat('pt-br', { notation: 'standard' })
+            res.innerHTML = ''
+            // Pega os dados do formulários
+            let n = Number(qtd.value)
+            tipo.innerHTML = `Sequência de Fibonacci com ${n} termos`
+
+            // Cria a sequência partindo dos primeiros termos
+            let t1 = 0, t2 = 1
+            let c = 3
+            // Mostra os dois primeiros termos (sempre 0 e 1)
+            res.innerHTML = `${t1} \u{0027A1} ${t2}`
+            while (c <= n) {
+                // Calcula o próximo termo
+                let t3 = t1 + t2
+                res.innerHTML += ` \u{0027A1} ${formatador.format(t3)}`
+                console.log(`Elemento ${c} = ${t3}`)
+                // Atualiza os termos para calcular o próximo
+                t1 = t2
+                t2 = t3
+                c++
+            }
+            resultado.style.visibility = 'visible'
+
+        }
+        function limpar() {
+            // Quando o usuário clica no botão 'Recomeçar' do formulário
+            resultado.style.visibility = 'hidden'
+            qtd.focus()
+        }
+    </script>
+</body>
+</html>

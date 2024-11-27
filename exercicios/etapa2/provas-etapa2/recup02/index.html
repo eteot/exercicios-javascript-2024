@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação JavaScript</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(85, 53, 144);
+        }
+        
+        main, section {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+            line-height: 1.5em;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0f9400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0c6f00;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        seta direita: código U+27A1 
+        bandeira: código U+1F3C1
+        seta cima: código U+2B06
+     -->
+    <main>
+        <h1>Contagem em JavaScript</h1>
+        <p>Ao clicar no botão abaixo, será mostrada uma contagem regressiva que vai de 90 até 0, voltando de 3 em 3. Marque também os valores que são múltiplos de 7.</p>
+        <button onclick="contar()">Contar</button>
+    </main>
+    <section id="resultado">
+        <h2>Resultado</h2>
+        <p id="resposta">A resposta vem aqui</p>
+        <button onclick="limpar()">&#x2B06; Limpar</button>
+    </section>
+    <script>
+        resultado.style.visibility = 'hidden';  
+        function contar() {
+            let resposta = document.getElementById('resposta');
+            let contagem = '';
+            for (let i = 90; i >= 0; i -= 3) {
+                if (i % 7 == 0) {
+                    contagem += `<mark>&nbsp;<strong>${i}</strong>&nbsp;</mark> &#x27A1; `;
+                } else {
+                    contagem += `&nbsp;${i}&nbsp; &#x27A1; `;
+                }
+            }
+
+            contagem += ' &#x1F3C1; ';
+            resposta.innerHTML = contagem;
+            resultado.style.visibility = 'visible';
+        }
+
+        function limpar() {
+            resultado.style.visibility = 'hidden';
+        }
+    </script>
+</body>
+</html>

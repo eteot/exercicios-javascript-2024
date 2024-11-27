@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JS</title>
+</head>
+<body>
+    <main>
+        <h1>Preencha os dados</h1>
+        <form action="#" method="get" onsubmit="event.preventDefault();testador()">
+            <div>
+                <label for="fr1">Frase 1 </label>
+                <input type="text" name="fr1" id="fr1">
+            </div>
+            <div>
+                <label for="fr2">Frase 2 </label>
+                <input type="text" name="fr2" id="fr2">
+            </div>
+            <div>
+                <input type="submit" value="Verificar">
+            </div>
+        </form>
+    </main>
+    <section id="saida">
+        <h2>Resultado</h2>
+        <p id="result">O resultado vai aparecer aqui...</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

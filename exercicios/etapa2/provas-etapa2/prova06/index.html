@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de JavaScript</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: darkblue;
+        }
+
+        main, section {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.491);
+        }
+
+        h1, h2 {
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Alunos da turma</h1>
+        <p>Ao clicar no botão abaixo, o usuário vai digitar o nome e a nota na prova de alunos de uma turma. Isso vai acontecer para vários alunos, sem limite de quantidade. Quando o usuário decidir parar, será exibido na tela uma lista com:</p>
+        <ul>
+            <li>A quantidade de alunos na turma.</li>
+            <li>A média da turma.</li>
+            <li>Quantos alunos estão em recuperação, sabendo que alunos que tirarem menos de 6,0 estão nessa condição.</li>
+            <li>Quantos alunos tiraram nota máxima (10,0).</li>
+        </ul>
+        <button onclick="rotina()">Começar</button>
+    </main>
+    <section id="saida">
+        <h2>Resultado</h2>
+        <ul id="lista"></ul>
+    </section>
+    <script>
+        saida.style.visibility = 'hidden';
+        function rotina() {
+            const dinheiro = Intl.NumberFormat('pt-br', {style: 'currency', currency: 'BRL'})
+            const numero = Intl.NumberFormat('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 2 });
+            let cont = true
+            lista.innerHTML = ''
+            console.clear()
+            let c = 0
+            let soma = 0
+            let nome, nota, rec = 0, mais10 = 0
+            while (cont) {
+                c++
+                nome = prompt(`Qual é o nome do ${c}° aluno?`)
+                nota = Number(prompt(`Quanto ${nome} tirou na prova?`))
+                console.log(`${nome} tirou ${numero.format(nota)}`)
+                soma += nota
+                if (nota < 6) {
+                    rec++
+                }
+                if (nota == 10) {
+                    mais10++
+                }
+                cont = confirm('Quer cadastrar mais algum aluno?')
+            }
+            let media = soma / c
+            saida.style.visibility = 'visible';
+            lista.innerHTML += `<li>Ao todo, temos ${c} alunos na turma.</li>`
+            lista.innerHTML += `<li>A média da turma foi ${numero.format(media)}.</li>`
+            lista.innerHTML += `<li>Temos ${mais10} aluno(s) com nota 10,0.</li>`
+            lista.innerHTML += `<li>Temos ${rec} aluno(s) em recuperação.</li>`
+        }
+    </script>
+</body>
+</html>

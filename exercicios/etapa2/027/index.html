@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula JavaScript</title>
+</head>
+<body>
+    <main>
+        <h1>Contagem Personalizada (simples)</h1>
+        <p>Uma contagem personalizada pelo usuário.</p>
+        <button onclick="contagem()">Contar</button>
+        <p id="saida">A contagem vai aparecer aqui</p>
+    </main>
+
+    <script>
+        function contagem() {
+            let i = Number(prompt("Iniciar a contagem em"))
+            let f = Number(prompt("Terminar a contagem em"))
+            saida.innerHTML = ""
+            let c = i
+            while (c<=f) {
+                saida.innerHTML += ` ${c} `
+                c+=1
+            }
+            saida.innerHTML += ' FIM! '
+        }
+    </script>
+</body>
+</html>

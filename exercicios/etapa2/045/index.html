@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão JS 04</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Fatorial de um Número</h1>
+        <form action="#" method="get" onsubmit="event.preventDefault();fatorial()" onreset="limpar()">
+            <div>
+                <label for="num">Calcular o Fatorial de </label>
+                <input type="number" name="num" id="num" required min="0">
+            </div>
+            <input type="submit" value="Calcular">
+            <input type="reset" value="Recomeçar">
+        </form>
+    </main>
+
+    <section id="resultado">
+        <h2 id="tipo">Resultado</h2>
+        <p id="res">O resultado vem aqui</p>
+    </section>
+    
+
+    <script>
+        resultado.style.visibility = 'hidden'
+        function fatorial() {
+            // Cria um formatador de números para valores no formato Brasileiro
+            const formatador = Intl.NumberFormat('pt-br', { notation: 'standard' })
+            // Pegando dados do formulário
+            let n = Number(num.value)
+            
+            tipo.innerHTML = `Fatorial de ${n}`
+            res.innerHTML = `${n}! = `
+
+            // Calculando o fatorial
+            let f = 1
+            for (let c = n; c > 1; c--) {
+                res.innerHTML += `${c} x `
+                f *= c
+            }
+            // Usa o formatador para mostrar os números grandes de maneira mais agradável
+            res.innerHTML += `1 = ${formatador.format(f)}`
+            resultado.style.visibility = 'visible'
+
+        }
+        function limpar() {
+            // Quando o usuário clica no botão 'Recomeçar' do formulário
+            resultado.style.visibility = 'hidden'
+            num.focus()
+        }
+    </script>
+</body>
+</html>

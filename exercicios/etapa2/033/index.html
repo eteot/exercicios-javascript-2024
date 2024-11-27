@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JS</title>
+</head>
+<body>
+    <main>
+        <h1>Maior e menor valores</h1>
+        <button onclick="valores()">Iniciar</button>
+    </main>
+    <section>
+        <h2>Resultado</h2>
+        <p id="saida">Resultado</p>
+    </section>
+    <script>
+        function valores() {
+            let c = 1
+            let n, maior, menor
+            while (c <= 5) {
+                n = Number(prompt(`Digite o ${c}o. valor`))
+                console.log(`O valor ${n} foi o ${c}o.`)
+                if (c == 1) {
+                    menor = n
+                    maior = n
+                } else {
+                    if (n < menor) {
+                        menor = n
+                    }
+                    if (n > maior) {
+                        maior = n
+                    }
+                }
+                c++
+            }
+            saida.innerHTML = `O menor valor foi ${menor} e o  maior valor foi ${maior}.`
+        }
+    </script>
+</body>
+</html>

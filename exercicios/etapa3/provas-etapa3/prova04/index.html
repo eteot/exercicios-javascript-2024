@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Avaliação 3<sup>o</sup> Trimestre</h1>
+
+            <details>
+                <summary>Enunciado</summary>
+                <p>A seguir, temos um exemplo de atividade para manipulação de elementos de um vetor. Crie as rotinas para:</p>
+
+                <ul>
+                    <li>Mostrar o vetor na tela. Considere a possibilidade dele estar vazio. [2,0 pontos] </li>
+                    <li>Adicionar um novo elemento único ao final do vetor. Não poderemos ter dois elementos iguais em um vetor [3,0 pontos]</li>
+                    <li>Mostrar quantos elementos ao todo temos no vetor [1,0 ponto]</li>
+                </ul>
+            </details>
+
+            <div>
+                <label for="num">Número</label>
+                <input type="number" name="num" id="num">
+            </div>
+
+            <div class="botoes">
+                <button onclick="adicionar(num.value)">Adicionar</button>
+                <button onclick="tamanho()">Tamanho</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Vetor completo</h2>
+            <table>
+                <tr id="vetor"></tr>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

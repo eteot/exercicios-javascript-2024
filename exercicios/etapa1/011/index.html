@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: 12pt Arial;
+            text-align: center;
+        }
+        button{
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Numeros em Javascript</h1>
+    <button onclick="calcular()"> Clique para Calcular</button>
+    <section id="situacao">
+        <p> o Resultado vem aqui ... </p>
+    </section>
+
+    <script>
+        function calcular(){
+            //entrada
+            let res = document.querySelector('section#situacao');
+            let num = Number(window.prompt(`Digite um número: `));
+            
+            //saída
+            res.innerHTML = `<p> O número analisado é <strong> ${num} </strong> </p>`;  
+            res.innerHTML += `<p> Valor absoluto é <strong> ${Math.abs(num)} </strong> </p>`;  
+            res.innerHTML += `<p> A parte inteira é <strong> ${Math.trunc(num)} </strong> </p>`;  
+            res.innerHTML += `<p> O valor inteiro arredondado <strong> ${Math.round(num)} </strong> </p>`;  
+            res.innerHTML += `<p> A raiz quadrada é <strong> ${Math.sqrt(num)} </strong> </p>`;  
+            res.innerHTML += `<p> A raiz cúbica é <strong> ${Math.cbrt(num)} </strong> </p>`;  
+            res.innerHTML += `<p> ${num}<sup>2</sup> é <strong> ${Math.pow(num,2)} </strong> </p>`;  
+            res.innerHTML += `<p> ${num}<sup>3</sup> é <strong> ${Math.pow(num,3)} </strong> </p>`;  
+        }
+    </script>
+</body>
+
+</html>

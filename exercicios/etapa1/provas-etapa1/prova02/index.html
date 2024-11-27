@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de JavaScript</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: lightslategray;
+        }
+
+        main, section {
+            background-color: white;
+            max-width: 500px;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.467);
+        }
+
+        input[type=submit] {
+            color: white;
+            font-size: 1.2em;
+            background-color: lightslategray;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        input[type=number] {
+            font-size: 1.2em;
+        }
+
+        strong {
+            color: lightslategray;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Terça Parte do Número</h1>
+        <p>Peça a digitação de um número e mostre a sua <strong>terça parte</strong>.</p>
+        <form action="#" method="get" onsubmit="event.preventDefault();analisar()">
+            <label for="fnum">Digite um número:</label>
+            <input type="number" name="fnum" id="fnum" required>
+            <input type="submit" value="Calcular">
+        </form>
+    </main>
+
+    <section id="resultado">
+        <h2>Resultado</h2>
+        <p id="frase"></p>
+    </section>
+
+    <script>
+        resultado.style.visibility = "hidden"
+        function analisar() {
+            let num = Number(fnum.value)
+            let terca = num / 3
+
+            frase.innerHTML = `A terça parte de <strong>${num}</strong> é <strong>${terca.toFixed(2)}</strong>.`
+
+            resultado.style.visibility = "visible"
+        }
+    </script>
+</body>
+</html>

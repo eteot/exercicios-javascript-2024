@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula JavaScript</title>
+</head>
+<body>
+    <main>
+        <h1>Contagem Personalizada (completa com formulário)</h1>
+        <p>Uma contagem personalizada pelo usuário.</p>
+
+        <form action="#" method="get" onsubmit="event.preventDefault();contagem()">
+            <div>
+                <label for="ini">Início</label>
+                <input type="number" name="ini" id="ini" required>
+            </div>
+            <div>
+                <label for="fim">Fim</label>
+                <input type="number" name="fim" id="fim" required>
+            </div>
+            <input type="submit" value="Contar">
+        </form>
+
+        <p id="saida">A contagem vai aparecer aqui</p>
+    </main>
+
+    <script>
+        function contagem() {
+            let i = Number(ini.value)
+            let f = Number(fim.value)
+            saida.innerHTML = ""
+
+            if (i < f) {
+                // Contagem crescente
+                let c = i
+                while (c<=f) {
+                    saida.innerHTML += ` ${c} `
+                    c+=1
+                }
+            } else {
+                // Contagem decrescente
+                let c = i
+                while (c>=f) {
+                    saida.innerHTML += ` ${c} `
+                    c-=1
+                }
+            }
+            
+            saida.innerHTML += ' FIM! '
+        }
+    </script>
+</body>
+</html>

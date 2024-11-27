@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Avaliação 3<sup>o</sup> Trimestre</h1>
+
+            <details>
+                <summary>Enunciado</summary>
+                <p>A seguir, informe dois valores numéricos inteiros e escolha qual das opções será realizada com eles.</p>
+
+                <ul>
+                    <li>Somar os dois valores [1,0 ponto]</li>
+                    <li>Descobrir qual dos dois é o maior [1,0 ponto]</li>
+                    <li>Fazer uma contagem de um valor até o outro (crescente ou decrescente) [2,0 pontos]</li>
+                </ul>
+            </details>
+
+
+            <div>
+                <label for="val1">Valor 1</label>
+                <input type="number" name="val1" id="val1">
+            </div>
+
+            <div>
+                <label for="val2">Valor 2</label>
+                <input type="number" name="val2" id="val2">
+            </div>
+
+            <div class="botoes">
+                <button onclick="somar(val1.value, val2.value)">Somar</button>
+                <button onclick="maior(val1.value, val2.value)">Maior</button>
+                <button onclick="contar(val1.value, val2.value)">Contagem</button>
+            </div>
+        </section>
+
+        <section id="resultado">
+            <h2>Resultado</h2>
+            <p id="mensagem"></p>
+            <button onclick="voltar()">Voltar</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

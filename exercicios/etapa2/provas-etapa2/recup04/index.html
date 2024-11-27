@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação JavaScript</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(31, 96, 176);
+        }
+        
+        main, section {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+            line-height: 1.5em;
+        }
+
+        ul {
+            margin-left: 20px;
+            line-height: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0f9400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0c6f00;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        seta direita: código U+27A1 
+        bandeira: código U+1F3C1
+        seta cima: código U+2B06
+     -->
+    <main>
+        <h1>Vaquinha</h1>
+        <p>Crie um script que implemente uma vaquinha lendo nome e valor doado de várias pessoas (o usuário vai decidir se quer ou não continuar). Ao final, mostre:</p>
+
+        <ul>
+            <li>Quantas pessoas ajudaram na vaquinha.</li>
+            <li>Quanto foi arrecadado no total.</li>
+            <li>Quem foi a pessoa mais generosa e fez a maior doação.</li>
+            <li>Quantas pessoas doaram R$ 50,00 ou mais.</li>
+        </ul>
+        <button onclick="analisar()">Cadastrar Doações</button>
+    </main>
+    <section id="resultado">
+        <h2>Resultado da Vaquinha</h2>
+        <ul id="resposta"></ul>
+        <button onclick="limpar()">&#x2B06; Recomeçar</button>
+    </section>
+    <script>
+        resultado.style.visibility = 'hidden';  
+        function analisar() {
+            console.clear()
+            const numero = Intl.NumberFormat('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 2 });
+            const dinheiro = Intl.NumberFormat('pt-br', {style: 'currency', currency: 'BRL'})
+            let continuar = true
+            let tot = 0
+            let soma = 0
+            let maior
+            let rico
+            let mais50 = 0
+            while (continuar) {
+                tot++
+                let nome = prompt(`Nome do ${tot}º participante:`)
+                let valor = Number(prompt(`Quanto ${nome} doou para a vaquinha?`))
+                console.log(`${tot}: ${nome} doou ${dinheiro.format(valor)}`)
+                soma += valor
+                if (tot == 1 || valor > maior) {
+                    maior = valor
+                    rico = nome
+                }
+                if (valor >= 50) {
+                    mais50++
+                }
+                continuar = confirm('Quer cadastrar mais uma pessoa?')
+            }
+            let media = soma / tot
+            resposta.innerHTML = `<li>Ao todo ${tot} pessoas ajudaram na vaquinha.</li>`
+            resposta.innerHTML += `<li>Foi arrecadado ${dinheiro.format(soma)} no total.</li>`
+            resposta.innerHTML += `<li>A pessoa mais generosa foi ${rico}, que doou ${dinheiro.format(maior)}.</li>`
+            resposta.innerHTML += `<li>${mais50} pessoas doaram mais de R$ 50,00.</li>`
+            
+            resultado.style.visibility = 'visible';
+        }
+
+        function limpar() {
+            console.clear()
+            resultado.style.visibility = 'hidden';
+        }
+    </script>
+</body>
+</html>

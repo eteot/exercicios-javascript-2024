@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio JavaScript</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: darkorange;
+        }
+
+        h1, h2 {
+            color: darkorange;
+        }
+
+        main, section {
+            max-width: 500px;
+            background-color: white;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Análise de Preço</h1>
+
+        <form action="#" method="get" onsubmit="event.preventDefault();calcular()">
+            <div>
+                <label for="preco">Preço R$</label>
+                <input type="number" name="preco" id="preco" required step="0.01">
+            </div>
+            <div>
+                <label for="desc">Desconto</label>
+                <input type="number" name="desc" id="desc" required step="0.01" min="0" max="90">%
+            </div>
+            <div>
+                <input type="submit" value="Calcular">
+            </div>
+        </form>
+    </main>
+    <section id="saida">
+        <h2>Desconto calculado</h2>
+        <p id="frase">O resultado vai aparecer aqui</p>
+    </section>
+
+    <script>
+        // Relacionando elementos
+        let preco = document.getElementById("preco")
+        let desc = document.getElementById("desc")
+        let frase = document.getElementById("frase")
+        function calcular() {
+            let p = Number(preco.value)
+            let d = Number(desc.value)
+
+            let novo = p - (p * d / 100)
+
+            frase.innerHTML = `O produto que custava R$${p.toFixed(2)}, com ${d}% de desconto vai custar R$${novo.toFixed(2)}`
+        }
+    </script>
+</body>
+</html>

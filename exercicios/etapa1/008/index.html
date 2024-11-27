@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: 12pt Arial;
+            text-align: center;
+        }
+        button{
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Trabalhando com números</h1>
+    <button onclick="calcular()"> Clique para calcular</button>
+    <section id="res">
+        <p> o Resultado vem aqui ... </p>
+    </section>
+
+
+    <script>
+        //o que fica aqui fora vai eecutar automaticamente, SEMPRE que o site for carregado
+        window.alert('Seja bem-vindo(a) ao meu site!');
+
+        //já a função só vai aparecer quando o usuário clicar no botão que chama a função
+        function calcular(){
+            //entrada
+            let n1 = Number(document.prompt('Digite um número: '));
+            let res = Number(document.querySelector('section#res'));
+
+            //processamento
+            let dobro = n1*2;
+            let metade = n1/2;
+
+            //saída
+            res.innerHTML = `<p> O dobro de ${n1} é ${dobro} e a metade é ${metade} </p>`;  
+        }
+    </script>
+</body>
+
+</html>

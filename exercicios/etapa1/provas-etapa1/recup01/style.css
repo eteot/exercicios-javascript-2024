@@ -1,0 +1,40 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    background-color: blueviolet;
+}
+
+main, section {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bolder;
+    padding: 10px 40px;
+    border: 0px solid transparent;
+    border-radius: 10px;
+}
+
+h1, h2, strong {
+    color: rgb(89, 27, 148);
+}
+
+li {
+    line-height: 1.5em;
+}
+
+summary {
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 10px 5px;
+    border: 1px solid blueviolet;
+    background-color: rgba(137, 43, 226, 0.169);
+    border-radius: 5px;
+}

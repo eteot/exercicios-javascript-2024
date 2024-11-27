@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de JavaScript</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(81, 81, 241);
+        }
+
+        main, section {
+            background-color: white;
+            max-width: 500px;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.467);
+        }
+
+        input[type=submit] {
+            color: white;
+            font-size: 1.2em;
+            background-color: rgb(81, 81, 241);
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        input[type=text] {
+            font-size: 1.2em;
+        }
+
+        input[type=number] {
+            font-size: 1.2em;
+        }
+
+        strong {
+            color: rgb(49, 49, 149);
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Salário do Desenvolvedor</h1>
+        <p>Vamos solicitar o nome do desenvolvedor e quantos anos de experiência ele tem. </p>
+
+        <ul>
+            <li>De <strong>0 a 2 anos</strong> de experiência: <strong>Desenvolvedor Júnior</strong>, ganha em média <strong>1 salário mínimo</strong>.</li>
+            <li>De <strong>3 a 5 anos</strong> de experiência: <strong>Desenvolvedor Pleno</strong>, ganha em média <strong>5 salários mínimos</strong>.</li>
+            <li>Mais de <strong>6 anos</strong> de experiência: <strong>Desenvolvedor Sênior</strong>, ganha em média <strong>8 salários mínimos</strong>.</li>
+        </ul>
+
+        <form action="#" method="get" onsubmit="event.preventDefault();analisar()">
+            <div>
+                <label for="fnome">Nome do Desenvolvedor:</label>
+                <input type="text" name="fnome" id="fnome" required>
+            </div>
+
+            <div>
+                <label for="fanos">Tempo de experiência:</label>
+                <input type="number" name="fanos" id="fanos" min="0" max="50" required> anos
+            </div>
+
+            <div>
+                <input type="submit" value="Calcular Salário">
+            </div>
+        </form>
+        <small>Obs: Considere 1 salário mínimo = R$1.412,00</small>
+    </main>
+
+    <section id="resultado">
+        <h2>Resultado da Análise</h2>
+        <p id="frase"></p>
+    </section>
+
+    <script>
+        resultado.style.visibility = "hidden"
+        function analisar() {
+            let nome = fnome.value
+            let anos = Number(fanos.value)
+            let minimo = 1412.00
+
+            if (anos <= 2) {
+                frase.innerHTML = `${nome} é <strong>Desenvolvedor Júnior</strong>, com ${anos} anos de experiência, e ganha em média <strong>R$${minimo.toFixed(2)}</strong>.`
+            } else if (anos <= 5) {
+                frase.innerHTML = `${nome} é <strong>Desenvolvedor Pleno</strong>, com ${anos} anos de experiência, e ganha em média <strong>R$${(minimo * 5).toFixed(2)}</strong>.`
+            } else {
+                frase.innerHTML = `${nome} é <strong>Desenvolvedor Sênior</strong>, com ${anos} anos de experiência, e ganha em média <strong>R$${(minimo * 8).toFixed(2)}</strong>.`
+            }
+
+            resultado.style.visibility = "visible"
+        }
+    </script>
+</body>
+</html>

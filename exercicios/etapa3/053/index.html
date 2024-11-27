@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação JavaScript</title>
+    <link rel="stylesheet" href="style.css">      
+</head>
+<body>
+    <!-- 
+        seta direita: código U+27A1 
+        bandeira: código U+1F3C1
+        seta cima: código U+2B06
+     -->
+    <main>
+        <h1>Analisando Pessoas</h1>
+        <p>Crie um script que, quando o usuário clicar no botão abaixo, leia nome e idade de várias pessoas (o usuário vai decidir se quer ou não continuar). Ao final, mostre:</p>
+
+        <ul>
+            <li>Quantas pessoas foram cadastradas;</li>
+            <li>Quantas pessoas tem 18 anos ou mais;</li>
+            <li>Quem é a pessoa mais jovem;</li>
+            <li>A média de idade do grupo.</li>
+        </ul>
+        <button onclick="analisar()">Cadastrar Pessoas</button>
+    </main>
+    <section id="resultado">
+        <h2>Resultado da Análise</h2>
+        <ul id="resposta"></ul>
+        <button onclick="limpar()">&#x2B06; Recomeçar</button>
+    </section>
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

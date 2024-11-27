@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form action="#" method="get" onsubmit="event.preventDefault();maior(v1.value, v2.value, v3.value)">
+            <div>
+                <label for="v1">Valor 1: </label>
+                <input type="number" name="v1" id="v1">
+            </div>
+            <div>
+                <label for="v2">Valor 2: </label>
+                <input type="number" name="v2" id="v2">
+            </div>
+            <div>
+                <label for="v3">Valor 3: </label>
+                <input type="number" name="v3" id="v3">
+            </div>
+            <div>
+                <input type="submit" value="Qual é o maior?">
+            </div>
+        </form>
+    </main>
+
+    <section id="resultado">
+        
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

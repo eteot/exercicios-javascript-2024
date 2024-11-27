@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula JavaScript</title>
+</head>
+<body>
+    <main>
+        <h1>Tabuada</h1>
+        <p>Mostre a tabuada de um número.</p>
+
+        <form action="#" method="get" onsubmit="event.preventDefault();tabuada()">
+                <label for="num">Início</label>
+                <input type="number" name="num" id="num" required>
+            <input type="submit" value="Mostrar">
+        </form>
+
+        <p id="saida">A tabuada vai aparecer aqui</p>
+    </main>
+
+    <script>
+        function tabuada() {
+            let n = Number(num.value)
+            saida.innerHTML = ""
+            let c = 1
+            while (c<=10) {
+                saida.innerHTML += ` ${n} x ${c} = ${n*c} <br>`
+                c+=1
+            }
+        }
+    </script>
+</body>
+</html>

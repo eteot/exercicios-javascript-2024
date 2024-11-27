@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Vetores com valores aleatórios</h1>
+    </main>
+    <section id="saida">
+
+    </section>
+    <script>
+        let n = []
+        let ini = 20
+        let fim = 25
+
+        for(let c = 1; c <= 10; c++) {
+            // Sorteia valores
+            n.push(Math.round(Math.random()*(fim-ini))+ini)
+        }
+
+
+        saida.innerHTML = `O vetor é ${n}`
+    </script>
+</body>
+</html>

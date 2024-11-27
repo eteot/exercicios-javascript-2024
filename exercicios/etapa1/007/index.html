@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: 12pt Arial;
+            text-align: center;
+        }
+        button{
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Dados v2.0</h1>
+    <button onclick="inicio()"> Clique para começar</button>
+    <p><output id="saida"> Aqui irá aparecer o resultado </output></p>
+    
+    <section id="resultado">
+        <p> Aqui ira aparecer o resultado que aceita codificação html</p>
+    </section>
+
+    <script>
+        function inicio(){
+            let nome = window.prompt('Qual é o seu nome?');
+
+            let res1 = document.getElementById('saida');
+            res1.value = `Olá, ${nome}! É um prazer te conhecer!`;
+
+            let res = document.querySelector('section#resultado');
+            res.innerHTML = `<p> Olá, <strong>${nome}</strong>! É um grande prazer te conhecer! &#x1F596 </p>`;
+        }
+    </script>
+</body>
+</html>

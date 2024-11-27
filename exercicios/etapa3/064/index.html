@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna Eletrônica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--
+        Curiosidade: Acesse o site https://www.thispersondoesnotexist.com que gera imagens com IA de pessoas que não existem.
+    -->
+    <main id="urna">
+        <section id="visor">
+            <input type="number" name="numero" id="numero" min="0" max="999" maxlength="3" required readonly>
+            <img src="candidatos/vazio.jpg" id="foto" alt="candidato">
+            <p id="nome"></p>
+        </section>
+        <section id="teclado">
+            <button class="btnnum" onclick="digitanum(1)">1</button>
+            <button class="btnnum" onclick="digitanum(2)">2</button>
+            <button class="btnnum" onclick="digitanum(3)">3</button>
+            <button class="btnnum" onclick="digitanum(4)">4</button>
+            <button class="btnnum" onclick="digitanum(5)">5</button>
+            <button class="btnnum" onclick="digitanum(6)">6</button>
+            <button class="btnnum" onclick="digitanum(7)">7</button>
+            <button class="btnnum" onclick="digitanum(8)">8</button>
+            <button class="btnnum" onclick="digitanum(9)">9</button>
+            <button class="btnnum" onclick="digitanum(0)">0</button>
+            <button class="btncorr" onclick="limpa()">CORRIGE</button>
+            <button class="btnconf" onclick="confirma(numero.value, 1)">CONFIRMA</button>
+        </section>
+    </main>
+    <section id="resultado">
+        <table id="dados">
+        </table>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
