@@ -13,4 +13,4 @@ Exercício | Explicação | Executar | Código
 009 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/009) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/009)
 010 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/010) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/010)
 
-[ ⬅️ Voltar ](https://eteot.github.io/exercicios-javascript-2024/exercicios/)
+⬅️ [ Voltar ](https://eteot.github.io/exercicios-javascript-2024/exercicios/)
