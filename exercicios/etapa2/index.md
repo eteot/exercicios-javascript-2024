@@ -17,6 +17,17 @@ Exercício | Explicação | Executar | Código
 038 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/038) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/038)
 039 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/039) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/039)
 040 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/040) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/040)
+041 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/041) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/041)
+042 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/042) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/042)
+043 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/043) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/043)
+044 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/044) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/044)
+045 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/045) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/045)
+046 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/046) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/046)
+047 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/047) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/047)
+048 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/048) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/048)
+049 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/049) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/049)
+050 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/050) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/050)
+051 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa1/051) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa1/051)
 
 
 ⬅️ [ Voltar ](https://eteot.github.io/exercicios-javascript-2024/exercicios/)
