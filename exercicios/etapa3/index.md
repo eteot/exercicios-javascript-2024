@@ -20,7 +20,7 @@ prova2 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-202
 prova3 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa3/provas-etapa3/prova03/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa3/provas-etapa3/prova03/)
 prova4 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa3/provas-etapa3/prova04/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa3/provas-etapa3/prova04/)
 prova5 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa3/provas-etapa3/prova05/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa3/provas-etapa3/prova05/)
-prova6 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa3/provas-etapa3/prova65/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa3/provas-etapa3/prova06/)
+prova6 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa3/provas-etapa3/prova06/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa3/provas-etapa3/prova06/)
 recuperação1 | Em breve | [ ▶️ ](https://eteot.github.io/exercicios-javascript-2024/exercicios/etapa3/provas-etapa3/recup01/) | [ 📝 ](https://github.com/eteot/exercicios-javascript-2024/tree/main/exercicios/etapa3/provas-etapa3/recup01/)
 
 
