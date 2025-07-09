@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex.043 - Recuperação JS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Análise de Números</h1>
+            <form action="#" method="get" onsubmit="event.preventDefault();entrada()">
+                <div>
+                    <label for="quant">Ler um total de </label>
+                    <input type="number" name="quant" id="quant" required min="2"> valores
+                </div>
+                <input type="submit" value="Começar">
+            </form>
+        </section>
+        <section id="resultado">
+            <h2>Resultado</h2>
+            <ul id="lista">
+                    O resultado vem aqui
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
